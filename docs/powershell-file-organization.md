@@ -1,9 +1,3 @@
----
-description: 
-globs: 
-alwaysApply: true
----
-
 # PowerShell File Organization Procedures
 
 ## Introduction: A Humanistic Approach to File Organization
@@ -211,5 +205,3 @@ The PowerShell procedures outlined in this document represent more than technica
 3. **Individual cognitive approaches are honored** - Supporting multiple pathways to discover and interact with information
 
 When implemented thoughtfully, these practices transform file systems from mere storage into knowledge landscapes that invite exploration, foster connections, and adapt to individual learning approaches. This humanistic perspective on file organization becomes particularly valuable in educational technology contexts, where the goal is not just efficient data management but creating environments that support meaningful human learning and collaboration. 
-
-
