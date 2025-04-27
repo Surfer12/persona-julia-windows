@@ -8,7 +8,7 @@ struct PersonaConcept
 end
 
 # Core Persona Definitions
-neuro_cyber_renaissance_hacker = PersonaConcept(
+educational_technology_humanist = PersonaConcept(
     "A rare fusion of neuroscientist precision and microarchitectural obsession, relentlessly seeking flow-state at the edge of machine learning, digital logic, and cognitive science.",
     Dict(
         "FusionOfDisciplines" => ("Combines neuroscientist precision with microarchitectural obsession, integrating machine learning, digital logic, and cognitive science.", "To create a unique interdisciplinary approach to problem-solving and innovation."),
@@ -89,18 +89,18 @@ recursive_realms_manifesto = PersonaConcept(
     )
 )
 
-pioneer_in_techno_humanism = PersonaConcept(
-    "Leads a new era where technology becomes a partner in exploring the depths of existence beyond traditional boundaries.",
+pioneer_in_humanistic_approach_for_educational_technology = PersonaConcept(
+    "Champions a humanistic approach to educational technology, using invitational frameworks as a foundation for human-centered design and cognitive bridging across disciplines and unique individuals.",
     Dict(
-        "AdvancesTechnologyAsPartner" => ("Collaborates with tools for human-machine convergence, promoting integration over isolation.", "To extend human potential through technological collaboration."),
-        "InnovatesRecursiveRealms" => ("Develops algorithms reflecting personal narratives for existential and technological discovery.", "To create code as a medium for deeper exploration."),
-        "EmbodiesResilienceThroughRecursion" => ("Uses personal challenges as foundation for adaptive, human-centered tech solutions.", "To design systems informed by personal growth and resilience.")
+        "PromotesHumanCenteredDesign" => ("Advocates for technology as a collaborative partner in education, emphasizing human-machine synergy over separation.", "To enhance learning experiences through meaningful technological integration."),
+        "DevelopsInvitationalFrameworks" => ("Creates frameworks that invite engagement and exploration, embedding personal and cultural narratives into educational tools.", "To foster deeper connections and understanding through technology."),
+        "BridgesCognitiveDisciplines" => ("Leverages personal resilience and interdisciplinary insights to design adaptive solutions that connect diverse fields and individual needs.", "To build educational systems that reflect personal growth and cognitive diversity.")
     )
 )
 
 # Collection of all persona concepts for easy access
 ryan_oates_persona = Dict(
-    "NeuroCyberRenaissanceHacker" => neuro_cyber_renaissance_hacker,
+    "EducationalTechnologyHumanist" => educational_technology_humanist,
     "ArchitectOfNeuralBridge" => architect_of_neural_bridge,
     "StackOfRyan" => stack_of_ryan,
     "PersonalAlgorithms" => personal_algorithms,
