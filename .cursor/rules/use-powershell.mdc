@@ -1,0 +1,58 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+PowerShell AMD64 to be used for all commands in the terminal, alternatively, command prompt can be used
+
+ Direct PowerShell command to move the file using its directory handle:
+
+Example of working use case: 
+
+
+I'll now move the remaining file to the docs folder to complete the organization.
+
+```bash
+cmd /c move "Here's a section‑by‑section, item‑by‑ite.md" "docs\"
+```
+Let's verify the exact filename using a more detailed directory listing command:
+
+```bash
+Get-ChildItem -Force | Format-Table Name
+```
+Let's try one more approach using PowerShell's Copy-Item and then Remove-Item to handle the file with special characters:
+
+```bash
+$file = Get-ChildItem -Path "Here's a section‑by‑section, item‑by‑ite.md"; Copy-Item -Path $file.FullName -Destination "docs\$($file.Name)"; if ($?) { Remove-Item -Path $file.FullName }
+```
+Let's try a simpler approach by first creating a copy with a simpler name and then copying that file to the docs folder:
+
+```bash
+Copy-Item "Here's a section‑by‑section, item‑by‑ite.md" -Destination "docs\section-analysis.md"; Remove-Item "Here's a section‑by‑section, item‑by‑ite.md"
+```
+Let's verify the current directory structure after our organization efforts:
+
+Ran tool
+Let's look at the contents of each of our organized folders:
+
+Ran tool
+
+Ran tool
+
+Ran tool
+Now, let's make one final attempt to move the remaining file to the docs folder:
+
+```bash
+cmd /c copy "Here's a section‑by‑section, item‑by‑ite.md" "docs\section-by-section-analysis.md" && del "Here's a section‑by‑section, item‑by‑ite.md"
+```
+Let's try a direct PowerShell command to move the file using its directory handle:
+
+```bash
+Get-ChildItem | Where-Object {$_.Name -match "section"} | ForEach-Object { Copy-Item $_.FullName -Destination "docs\section-analysis.md"; Remove-Item $_.FullName }
+```
+Let's verify the current directory structure to see if our organization efforts have been successful:
+
+Great! All files have been successfully organized into appropriate folders. Let's confirm the content of each folder to ensure proper organization:
+
+This organization makes the workspace more structured and allows for better navigation and management of related files.
+
