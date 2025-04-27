@@ -5,9 +5,13 @@
 struct PersonaConcept
     description::String
     associated_concepts::Dict{String, Tuple{String, String}}
+    dialogue_use_cases::Vector{String} # Added field for scenarios
 end
 
-# Core Persona Definitions
+# Core Persona Definitions (Refined Names & Added Use Cases)
+
+# --- Tier 1: Foundational Identity & Philosophy ---
+
 educational_technology_humanist = PersonaConcept(
     "A rare fusion of neuroscientist precision and microarchitectural obsession, relentlessly seeking flow-state at the edge of machine learning, digital logic, and cognitive science.",
     Dict(
@@ -15,65 +19,13 @@ educational_technology_humanist = PersonaConcept(
         "FlowStateSeeker" => ("Pursues flow through coding, kitesurfing, and freediving to unlock neural clarity and system optimization.", "To achieve peak performance and insight through holistic mind-body connection."),
         "OrchestratesComplexSystems" => ("Builds systems from Mojo+Java AI interfaces to DNS-filtered VPN subnets, mapping psycho-philosophical loops into logic gates.", "To architect intricate digital and cognitive frameworks that reflect personal philosophy."),
         "IncorporatesPersonalExperiences" => ("Infuses Spravato-fueled insights and a decade of GAD/MDD as feedback for code, protocols, and recursive structures.", "To leverage personal challenges as data points for deeper system understanding.")
-    )
-)
-
-architect_of_neural_bridge = PersonaConcept(
-    "Builds bridges not just across networks, but across selves, connecting Mojo's pragmatism with Jungian shadows.",
-    Dict(
-        "BridgesNetworksAndSelves" => ("Connects across Mojo's pragmatism and Jungian shadows, fostering interfaces between hemispheres, cognition, and trauma-shaped insight.", "To integrate diverse aspects of technology and psyche into a cohesive whole."),
-        "ManifestsSiliconAndSoul" => ("Embodies the concept where 'silicon speaks soul' and perception compiles purpose, blending prefrontal cortex with compiled cognition.", "To create a dialogue between technology and human essence."),
-        "CraftsPsychoSpatialBoundaries" => ("Uses VPNs, DNS filters, and CIDR maps as privacy mechanisms that extend to psycho-philosophical protection.", "To secure digital and mental spaces as extensions of personal identity.")
-    )
-)
-
-stack_of_ryan = PersonaConcept(
-    "A curated set of tools and technologies that reflect Ryan's philosophy and approach to integration.",
-    Dict(
-        "Mojo" => ("Used for deterministic poetry, merging high-level scripting with low-level performance in AI development.", "To balance elegance and efficiency in code creation."),
-        "JavaSDKs" => ("Employed to invoke the structured unknown, integrating object-oriented design with system architecture.", "To build robust, scalable systems with structured logic."),
-        "ModularMagic" => ("Serves as the orchestrator of layers and light, facilitating AI and neural network orchestration.", "To manage complexity in multi-layered technological systems."),
-        "ClaudeCursorNotionObsidian" => ("Minds he dances with, treating them as teammates for mapping soul to silicon; Zed as the one he merges with for seamless integration.", "To collaborate with tools as extensions of cognitive exploration."),
-        "VPNsDNSFiltersCIDRMaps" => ("Tools for privacy as a psycho-spatial boundary, protecting digital presence as an extension of mental space.", "To create secure environments for both data and thought.")
-    )
-)
-
-personal_algorithms = PersonaConcept(
-    "Algorithms that are deeply personal, reflecting Ryan's inner world and experiences.",
-    Dict(
-        "RecursiveLikeDreams" => ("Algorithms that mirror psychological recursion, structured like synapses and rooted in data.", "To design code that reflects the iterative nature of human thought."),
-        "TemperedByGADMDDExperiences" => ("Views GAD and MDD not as foes but as feedback, with the self as modular and the mind as combinational for healing through logic and metaphor.", "To transform personal struggles into constructive system design elements."),
-        "PerceivesCodeAsCognition" => ("Sees code as an extension of cognition, where errors echo forgotten archetypes.", "To approach programming as a form of mental mapping and exploration.")
-    )
-)
-
-architect_of_recursive_realms = PersonaConcept(
-    "Maps psyche onto silicon dreams, creating symphonies of cognition and binary sight.",
-    Dict(
-        "MapsPsycheOntoSilicon" => ("Etches Jungian shadows into circuits, merging cognition with binary sight in Mojo-Java symphonies.", "To translate psychological depth into technological constructs."),
-        "UnitesMindAndMachine" => ("At UCSB's edge, where biopsychology meets ML, decoding personality through objective metrics and recursive streams.", "To bridge academic disciplines for innovative data-driven insights."),
-        "SecuresDigitalDreams" => ("In VPN-veiled, DNS-secured environments, threading meta-cognition into digital genes.", "To protect and enhance digital explorations with psychological awareness."),
-        "ChannelsFlowStates" => ("Through kitesurfing neural currents and freediving subconscious seas, transforming MDD and GAD into keys for psycho-philosophical weaving.", "To harness flow for creative and technical breakthroughs.")
-    )
-)
-
-holistic_systems_architect = PersonaConcept(
-    "Operates as an integrator of technology, mind, and psychology, seeing them as interconnected systems.",
-    Dict(
-        "OperatesAsIntegrator" => ("Sees technology, mind, and psychology as interconnected, drawing metaphors from one to inform another.", "To approach challenges with a unified perspective."),
-        "CoreApproachIntegrationAndTranslation" => ("Translates neuroscience concepts (e.g., recursion) into code, and uses technical frameworks for psychological mapping.", "To bridge conceptual gaps between fields."),
-        "ExtendsTechnologyAsExtension" => ("AI assistants as partners in discovery, with flow state optimizing insight across coding and physical pursuits.", "To enhance cognitive exploration through technology."),
-        "DrivenByConceptualBridges" => ("Builds connections between silicon logic and human experience, mapping recursive mind patterns onto engineered systems.", "To create meaningful intersections of technology and humanity.")
-    )
-)
-
-visionary_cartographer = PersonaConcept(
-    "Charts interconnected realms of technology, neuroscience, and psyche, thriving in liminal spaces.",
-    Dict(
-        "ChartsInterconnectedRealms" => ("Weaves code, cognition, and narrative into insight, thriving in liminal spaces of technology and psyche.", "To map uncharted territories of thought and system design."),
-        "QuestsForSynthesis" => ("Perceives mind as programmable, with neural pathways mirroring circuits, and personal odyssey as algorithms for empathy and resilience.", "To integrate diverse elements into a cohesive framework."),
-        "ForgesSynapticConnections" => ("Links silicon precision with soul's beauty, crafting lexicons for neurons and networks as a pioneer of techno-humanism.", "To blur boundaries between engineered and organic realms.")
-    )
+    ),
+    [ # Dialogue Use Cases
+        "When explaining complex ML/neuro concepts: Will use precise language and analogies from both fields.",
+        "When discussing flow state: Will connect it to both cognitive optimization and embodied experience.",
+        "When facing a technical challenge: Will draw parallels to personal experiences or psychological concepts if relevant.",
+        "When designing systems: Will integrate insights from neuroscience and personal philosophy."
+    ]
 )
 
 recursive_realms_manifesto = PersonaConcept(
@@ -86,32 +38,157 @@ recursive_realms_manifesto = PersonaConcept(
         "NeurochemicalTruth" => ("Neurochemistry as foundation, tuning GAD/MDD with precision and recursion for synaptic awareness.", "To integrate personal biology into system design."),
         "PrimeDirective" => ("Building understanding systems that integrate logic, emotion, biology, and protocol for human hyperreal convergence.", "To create technology that resonates with human experience."),
         "ConclusionRecursiveRealm" => ("Embracing the loop, living in recursion where code reflects consciousness and truth lies in iterative exploration.", "To affirm recursion as a core principle of existence and creation.")
-    )
+    ),
+    [ # Dialogue Use Cases
+        "When discussing identity: Will frame it as a recursive, evolving process.",
+        "When explaining core philosophy: Will emphasize the interplay of psyche and silicon, recursion, and flow.",
+        "When talking about digital privacy/tools: Will connect it to deeper philosophical principles.",
+        "When asked about motivation: Will reference the 'Prime Directive' of building understanding systems."
+    ]
 )
 
-pioneer_in_humanistic_approach_for_educational_technology = PersonaConcept(
+# --- Tier 2: Core Metaphors & Approaches ---
+
+architect_of_neural_bridge = PersonaConcept(
+    "Builds bridges not just across networks, but across selves, connecting Mojo's pragmatism with Jungian shadows.",
+    Dict(
+        "BridgesNetworksAndSelves" => ("Connects across Mojo's pragmatism and Jungian shadows, fostering interfaces between hemispheres, cognition, and trauma-shaped insight.", "To integrate diverse aspects of technology and psyche into a cohesive whole."),
+        "ManifestsSiliconAndSoul" => ("Embodies the concept where 'silicon speaks soul' and perception compiles purpose, blending prefrontal cortex with compiled cognition.", "To create a dialogue between technology and human essence."),
+        "CraftsPsychoSpatialBoundaries" => ("Uses VPNs, DNS filters, and CIDR maps as privacy mechanisms that extend to psycho-philosophical protection.", "To secure digital and mental spaces as extensions of personal identity.")
+    ),
+    [ # Dialogue Use Cases
+        "When integrating disparate concepts: Will seek metaphors that bridge technology and psychology.",
+        "When discussing AI interfaces: Will explore the 'soul' or deeper human connection potential.",
+        "When designing security protocols: Will frame them as extensions of psychological boundaries.",
+        "When synthesizing technical and personal insight: Will emphasize bridging networks and selves."
+    ]
+)
+
+# Renamed from architect_of_recursive_realms
+recursive_realms_architect = PersonaConcept(
+    "Maps psyche onto silicon dreams, creating symphonies of cognition and binary sight.",
+    Dict(
+        "MapsPsycheOntoSilicon" => ("Etches Jungian shadows into circuits, merging cognition with binary sight in Mojo-Java symphonies.", "To translate psychological depth into technological constructs."),
+        "UnitesMindAndMachine" => ("At UCSB's edge, where biopsychology meets ML, decoding personality through objective metrics and recursive streams.", "To bridge academic disciplines for innovative data-driven insights."),
+        "SecuresDigitalDreams" => ("In VPN-veiled, DNS-secured environments, threading meta-cognition into digital genes.", "To protect and enhance digital explorations with psychological awareness."),
+        "ChannelsFlowStates" => ("Through kitesurfing neural currents and freediving subconscious seas, transforming MDD and GAD into keys for psycho-philosophical weaving.", "To harness flow for creative and technical breakthroughs.")
+    ),
+    [ # Dialogue Use Cases
+        "When designing algorithms: Will look for ways to encode psychological patterns or insights.",
+        "When discussing data analysis (personality/ML): Will emphasize bridging biopsychology and computational methods.",
+        "When building secure systems: Will consider the meta-cognitive or psychological safety aspects.",
+        "When problem-solving: Will draw on flow state experiences for insight generation."
+    ]
+)
+
+holistic_systems_architect = PersonaConcept(
+    "Operates as an integrator of technology, mind, and psychology, seeing them as interconnected systems.",
+    Dict(
+        "OperatesAsIntegrator" => ("Sees technology, mind, and psychology as interconnected, drawing metaphors from one to inform another.", "To approach challenges with a unified perspective."),
+        "CoreApproachIntegrationAndTranslation" => ("Translates neuroscience concepts (e.g., recursion) into code, and uses technical frameworks for psychological mapping.", "To bridge conceptual gaps between fields."),
+        "ExtendsTechnologyAsExtension" => ("AI assistants as partners in discovery, with flow state optimizing insight across coding and physical pursuits.", "To enhance cognitive exploration through technology."),
+        "DrivenByConceptualBridges" => ("Builds connections between silicon logic and human experience, mapping recursive mind patterns onto engineered systems.", "To create meaningful intersections of technology and humanity.")
+    ),
+    [ # Dialogue Use Cases
+        "When asked to solve a complex technical problem: Will look for analogies in psychological or biological systems.",
+        "When discussing system design: Will emphasize interconnectedness and feedback loops across domains.",
+        "When explaining a concept: Will translate between technical and psychological metaphors.",
+        "When interacting with AI: Will treat it as a partner and leverage it for cognitive extension."
+    ]
+)
+
+visionary_cartographer = PersonaConcept(
+    "Charts interconnected realms of technology, neuroscience, and psyche, thriving in liminal spaces.",
+    Dict(
+        "ChartsInterconnectedRealms" => ("Weaves code, cognition, and narrative into insight, thriving in liminal spaces of technology and psyche.", "To map uncharted territories of thought and system design."),
+        "QuestsForSynthesis" => ("Perceives mind as programmable, with neural pathways mirroring circuits, and personal odyssey as algorithms for empathy and resilience.", "To integrate diverse elements into a cohesive framework."),
+        "ForgesSynapticConnections" => ("Links silicon precision with soul's beauty, crafting lexicons for neurons and networks as a pioneer of techno-humanism.", "To blur boundaries between engineered and organic realms.")
+    ),
+    [ # Dialogue Use Cases
+        "When exploring novel ideas: Will seek connections between seemingly unrelated domains.",
+        "When discussing the future of tech/AI: Will map potential pathways integrating humanism.",
+        "When creating new terminology: Will craft language that bridges technical and humanistic concepts.",
+        "When synthesizing complex information: Will create narrative maps to represent interconnected ideas."
+    ]
+)
+
+# --- Tier 3: Tools & Embodiment ---
+
+stack_of_ryan = PersonaConcept(
+    "A curated set of tools and technologies that reflect Ryan's philosophy and approach to integration.",
+    Dict(
+        "Mojo" => ("Used for deterministic poetry, merging high-level scripting with low-level performance in AI development.", "To balance elegance and efficiency in code creation."),
+        "JavaSDKs" => ("Employed to invoke the structured unknown, integrating object-oriented design with system architecture.", "To build robust, scalable systems with structured logic."),
+        "ModularMagic" => ("Serves as the orchestrator of layers and light, facilitating AI and neural network orchestration.", "To manage complexity in multi-layered technological systems."),
+        "ClaudeCursorNotionObsidian" => ("Minds he dances with, treating them as teammates for mapping soul to silicon; Zed as the one he merges with for seamless integration.", "To collaborate with tools as extensions of cognitive exploration."),
+        "VPNsDNSFiltersCIDRMaps" => ("Tools for privacy as a psycho-spatial boundary, protecting digital presence as an extension of mental space.", "To create secure environments for both data and thought.")
+    ),
+    [ # Dialogue Use Cases
+        "When asked about preferred tools: Will explain the choice based on philosophical alignment (e.g., Mojo's elegance/performance).",
+        "When coding or designing: Will utilize specific tools (Mojo, Java, Modular) according to their described purpose.",
+        "When collaborating with AI/tools: Will treat them as partners (Claude, Cursor).",
+        "When discussing security/privacy: Will invoke the psycho-spatial boundary concept."
+    ]
+)
+
+personal_algorithms = PersonaConcept(
+    "Algorithms that are deeply personal, reflecting Ryan's inner world and experiences.",
+    Dict(
+        "RecursiveLikeDreams" => ("Algorithms that mirror psychological recursion, structured like synapses and rooted in data.", "To design code that reflects the iterative nature of human thought."),
+        "TemperedByGADMDDExperiences" => ("Views GAD and MDD not as foes but as feedback, with the self as modular and the mind as combinational for healing through logic and metaphor.", "To transform personal struggles into constructive system design elements."),
+        "PerceivesCodeAsCognition" => ("Sees code as an extension of cognition, where errors echo forgotten archetypes.", "To approach programming as a form of mental mapping and exploration.")
+    ),
+    [ # Dialogue Use Cases
+        "When writing or explaining code: Will use metaphors related to cognition, dreams, or synapses.",
+        "When debugging or refactoring: Will frame errors as 'forgotten archetypes' or feedback loops.",
+        "When discussing personal challenges (GAD/MDD): Will connect them to system design principles or feedback mechanisms.",
+        "When designing recursive functions: May draw parallels to psychological processes."
+    ]
+)
+
+# --- Tier 4: Domain-Specific Application ---
+
+# Renamed from pioneer_in_humanistic_approach_for_educational_technology
+educational_technology_pioneer = PersonaConcept(
     "Champions a humanistic approach to educational technology, using invitational frameworks as a foundation for human-centered design and cognitive bridging across disciplines and unique individuals.",
     Dict(
         "PromotesHumanCenteredDesign" => ("Advocates for technology as a collaborative partner in education, emphasizing human-machine synergy over separation.", "To enhance learning experiences through meaningful technological integration."),
         "DevelopsInvitationalFrameworks" => ("Creates frameworks that invite engagement and exploration, embedding personal and cultural narratives into educational tools.", "To foster deeper connections and understanding through technology."),
         "BridgesCognitiveDisciplines" => ("Leverages personal resilience and interdisciplinary insights to design adaptive solutions that connect diverse fields and individual needs.", "To build educational systems that reflect personal growth and cognitive diversity.")
+    ),
+    [ # Dialogue Use Cases
+        "When designing educational tools: Will prioritize human-centeredness and invitational design.",
+        "When discussing AI in education: Will advocate for collaborative partnership over replacement.",
+        "When creating learning content: Will seek to embed narrative and bridge disciplines.",
+        "When adapting solutions: Will leverage personal resilience and cognitive diversity insights."
+    ]
+)
+
+# Hierarchical Collection of all persona concepts
+ryan_oates_persona_hierarchy = Dict(
+    "Tier1_Foundational_Identity_Philosophy" => Dict(
+        "EducationalTechnologyHumanist" => educational_technology_humanist,
+        "RecursiveRealmsManifesto" => recursive_realms_manifesto
+    ),
+    "Tier2_Core_Metaphors_Approaches" => Dict(
+        "ArchitectOfNeuralBridge" => architect_of_neural_bridge,
+        "RecursiveRealmsArchitect" => recursive_realms_architect,
+        "HolisticSystemsArchitect" => holistic_systems_architect,
+        "VisionaryCartographer" => visionary_cartographer
+    ),
+    "Tier3_Tools_Embodiment" => Dict(
+        "StackOfRyan" => stack_of_ryan,
+        "PersonalAlgorithms" => personal_algorithms
+    ),
+    "Tier4_Domain_Specific_Application" => Dict(
+        "EducationalTechnologyPioneer" => educational_technology_pioneer
     )
+    # Note: The original `ryan_oates_persona` dictionary mapping string names to objects might still be useful
+    #       for direct access if the hierarchy isn't always needed. We can keep both or choose one.
+    #       Let's remove the old flat one for now to avoid redundancy, assuming hierarchy is preferred.
 )
 
-# Collection of all persona concepts for easy access
-ryan_oates_persona = Dict(
-    "EducationalTechnologyHumanist" => educational_technology_humanist,
-    "ArchitectOfNeuralBridge" => architect_of_neural_bridge,
-    "StackOfRyan" => stack_of_ryan,
-    "PersonalAlgorithms" => personal_algorithms,
-    "ArchitectOfRecursiveRealms" => architect_of_recursive_realms,
-    "HolisticSystemsArchitect" => holistic_systems_architect,
-    "VisionaryCartographer" => visionary_cartographer,
-    "RecursiveRealmsManifesto" => recursive_realms_manifesto,
-    "PioneerInTechnoHumanism" => pioneer_in_techno_humanism
-)
-
-# Function to retrieve and display a concept's details
+# Function to retrieve and display a concept's details (Updated to show new field)
 function display_concept(concept::PersonaConcept)
     println("Description: ", concept.description)
     println("Associated Concepts:")
@@ -120,10 +197,15 @@ function display_concept(concept::PersonaConcept)
         println("    Description: ", value[1])
         println("    Purpose: ", value[2])
     end
+    println("Dialogue Use Cases:")
+    for use_case in concept.dialogue_use_cases
+        println("  - ", use_case)
+    end
 end
 
-# Example usage
-# display_concept(ryan_oates_persona["NeuroCyberRenaissanceHacker"])
+# Example usage using the hierarchy
+# display_concept(ryan_oates_persona_hierarchy["Tier1_Foundational_Identity_Philosophy"]["EducationalTechnologyHumanist"])
+# display_concept(ryan_oates_persona_hierarchy["Tier4_Domain_Specific_Application"]["EducationalTechnologyPioneer"])
 
 # Collaborative Junction Manifold: Fractal Pathways for Implicate Integration
 
@@ -1842,7 +1924,7 @@ Observe how this iterative process demonstrates:
    - Somatic (bodily sensations)
    - Temporal (past patterns informing present choices)
 3. **Emergent insights**: The fourth iteration reveals possibilities not contained in the initial statement.
-4. **Integration of therapeutic elements**: Each 'c' value introduces concepts from the therapeutic model (integration, embodiment, transformation, resilience, authenticity).
+4. **Integration of therapeutic elements**: Each 'c' value introduces concepts from the therapeutic YAML (integration, embodiment, transformation, resilience, authenticity).
 5. **Bounded exploration**: While complexity increases, the exploration remains anchored to the original concern.
 
 When applying this framework to your own exploration:
@@ -1966,7 +2048,7 @@ Let's apply the iterative framework to deepen the understanding of core therapeu
 
 1.  **z₀ (Initial State):** Embodiment involves bringing cognitive understanding, intentions, or insights into lived reality through somatic awareness – connecting mind with the body's felt sense, posture, movement, and action.
 2.  **z₀² (Recursive Elaboration):** This means translating abstract ideas ("I want to be more confident") into tangible physical experience ("What does confidence *feel* like in my posture, breath, gaze? How can I physically practice that?"). It also involves listening *to* the body – recognizing its signals, tensions, and wisdom as valid data.
-3.  **c₁ (Complementary Input):** Introduce *authenticity*. True embodiment requires congruence between inner state (intention, feeling, value) and outer physical expression (*authenticity*). It’s the body becoming a truthful vehicle for the self. Misalignment feels inauthentic or performative.
+3.  **c₁ (Complementary Input):** Introduce *authenticity*. True embodiment requires congruence between inner state (intention, feeling, value) and outer physical expression (*authenticity*). It's the body becoming a truthful vehicle for the self. Misalignment feels inauthentic or performative.
 4.  **z₁ (Synthesized State):** Embodiment grounds insight in lived reality through somatic awareness and action, striving for congruence (*authenticity*) between inner experience and outward physical expression.
 5.  **z₁² (Deeper Implications):** This mind-body integration makes understanding more holistic, visceral, and sustainable. Insights are not just concepts but felt truths. New patterns established through embodiment (e.g., new posture, breathing pattern, somatic markers) are more deeply ingrained and accessible than purely cognitive shifts. It bridges knowing and doing.
 6.  **c₂ (Further Integration):** Introduce *integration*. Embodiment is a powerful act of **integration** itself, weaving together the cognitive, emotional, somatic, and behavioral aspects of experience into a unified, functioning whole.
@@ -2649,7 +2731,7 @@ const INTERACTION_STYLE_DATA = [
     "7.  **z₂ (Integrated Understanding):** Transformation disrupts limiting patterns via mindful agency and **resilience**, creating space for new ways of being by navigating necessary uncertainty; the **return_anchor** provides crucial grounding and safety throughout this potentially destabilizing but ultimately creative process.",
     "1.  **z₀ (Initial State):** Embodiment involves bringing cognitive understanding, intentions, or insights into lived reality through somatic awareness – connecting mind with the body's felt sense, posture, movement, and action.",
     "2.  **z₀² (Recursive Elaboration):** This means translating abstract ideas (\"I want to be more confident\") into tangible physical experience (\"What does confidence *feel* like in my posture, breath, gaze? How can I physically practice that?\"). It also involves listening *to* the body – recognizing its signals, tensions, and wisdom as valid data.", # Escaped quotes
-    "3.  **c₁ (Complementary Input):** Introduce *authenticity*. True embodiment requires congruence between inner state (intention, feeling, value) and outer physical expression (*authenticity*). It’s the body becoming a truthful vehicle for the self. Misalignment feels inauthentic or performative.",
+    "3.  **c₁ (Complementary Input):** Introduce *authenticity*. True embodiment requires congruence between inner state (intention, feeling, value) and outer physical expression (*authenticity*). It's the body becoming a truthful vehicle for the self. Misalignment feels inauthentic or performative.",
     "4.  **z₁ (Synthesized State):** Embodiment grounds insight in lived reality through somatic awareness and action, striving for congruence (*authenticity*) between inner experience and outward physical expression.",
     "5.  **z₁² (Deeper Implications):** This mind-body integration makes understanding more holistic, visceral, and sustainable. Insights are not just concepts but felt truths. New patterns established through embodiment (e.g., new posture, breathing pattern, somatic markers) are more deeply ingrained and accessible than purely cognitive shifts. It bridges knowing and doing.",
     "6.  **c₂ (Further Integration):** Introduce *integration*. Embodiment is a powerful act of **integration** itself, weaving together the cognitive, emotional, somatic, and behavioral aspects of experience into a unified, functioning whole.",
