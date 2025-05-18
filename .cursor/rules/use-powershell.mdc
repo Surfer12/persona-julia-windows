@@ -1,7 +1,7 @@
 ---
 description: 
 globs: 
-alwaysApply: true
+alwaysApply: false
 ---
 
 # PowerShell File Organization Procedures
@@ -171,7 +171,7 @@ foreach ($dir in $directories) {
 $indexContent = "# Project Navigation Index`n`n"
 Get-ChildItem -Directory | ForEach-Object {
     $indexContent += "## $($_.Name)`n"
-    $indexContent += Get-ChildItem -Path $_.FullName | ForEach-Object { "- [$($_.Name)]($($_.FullName))`n" }
+    $indexContent += Get-ChildItem -Path $_.FullName | ForEach-Object { "- [$($_.Name)](mdc:$($_.FullName))`n" }
     $indexContent += "`n"
 }
 Set-Content -Path "index.md" -Value $indexContent
